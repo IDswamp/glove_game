@@ -1,0 +1,16 @@
+## Отслеживать через LFS все файлы с этими расширениями
+# Изображения
+*.psd filter=lfs diff=lfs merge=lfs -text
+*.png filter=lfs diff=lfs merge=lfs -text
+*.jpg filter=lfs diff=lfs merge=lfs -text
+
+# 3D-модели
+*.fbx filter=lfs diff=lfs merge=lfs -text
+*.blend filter=lfs diff=lfs merge=lfs -text
+
+# Аудио
+*.wav filter=lfs diff=lfs merge=lfs -text
+*.mp3 filter=lfs diff=lfs merge=lfs -text
+
+# Настроить слияние для файлов сцен Unity, чтобы всегда использовать нашу версию при конфликте
+*.unity merge=unityyamlmerge
